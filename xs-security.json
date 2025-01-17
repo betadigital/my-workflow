@@ -1,0 +1,31 @@
+{
+  "xsappname": "sapuiworkflowtrial",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.openid",
+      "description": "OpenID scope"
+    },
+    {
+      "name": "$XSAPPNAME.user",
+      "description": "User access scope"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "User",
+      "description": "Default User Role",
+      "scope-references": [
+        "$XSAPPNAME.openid",
+        "$XSAPPNAME.user"
+      ]
+    }
+  ],
+  "oauth2-configuration": {
+    "redirect-uris": [
+      "http://localhost:8080/login/callback",
+      "http://localhost:8080/**"
+    ]
+  }
+}

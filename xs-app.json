@@ -1,0 +1,38 @@
+{
+  "welcomeFile": "/index.html",
+  "login": {
+    "callbackEndpoint": "/index.html"
+  },
+  "logout": {
+    "logoutEndpoint": "/logout",
+    "logoutPage": "/index.html"
+  },
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "^/workflow_api/(.*)$",
+      "destination": "SAP_Build_Workflow",
+      "authenticationType": "xsuaa",
+      "csrfProtection": true
+    },
+    {
+      "source": "^/dms_api/(.*)$",
+      "service":  "com.sap.ecm.reuse",
+      "destination": "SAP_DMS",
+      "authenticationType": "xsuaa",
+      "csrfProtection": true
+    },
+    {
+      "source": "^/user_api/(.*)$",
+      "service": "sap-approuter-userapi",
+      "csrfProtection": true,
+      "authenticationType":"xsuaa"
+    },
+    {
+      "source": "^(.*)$",
+      "target": "$1",
+      "service": "html5-apps-repo-rt",
+      "authenticationType": "xsuaa"
+    }
+  ]
+}

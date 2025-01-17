@@ -1,0 +1,40 @@
+<mvc:View controllerName="sap.ui.workflowtrial.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" titleAlignment="Center" showHeader="true">
+      <content>
+        <Table
+          id="workflowTable"
+          items="{workflowModel>/workflowData/rows}" mode="SingleSelectMaster" selectionChange="onRowSelect">
+          <columns>
+            <Column>
+              <Text text="Name" />
+            </Column>
+            <Column>
+              <Text text="Status" />
+            </Column>
+            <Column>
+              <Text text="Environment" />
+            </Column>
+            <Column>
+              <Text text="Project" />
+            </Column>
+            <Column>
+              <Text text="Started On" />
+            </Column>
+          </columns>
+          <items>
+            <ColumnListItem>
+              <cells>
+                <Text text="{workflowModel>subject}" />
+                <Text text="{workflowModel>status}" />
+                <Text text="{workflowModel>environmentId}" />
+                <Text text="{workflowModel>projectId}" />
+                <Text text="{workflowModel>startedAt}" />
+              </cells>
+            </ColumnListItem>
+          </items>
+        </Table>
+      </content>
+    </Page>
+</mvc:View>
