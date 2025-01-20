@@ -10,17 +10,16 @@
   "authenticationMethod": "route",
   "routes": [
     {
-      "source": "^/workflow_api/(.*)$",
+      "source": "^/SAP_Build_Workflow/(.*)$",
+      "target": "/public/workflow/rest/$1",
       "destination": "SAP_Build_Workflow",
-      "authenticationType": "xsuaa",
-      "csrfProtection": true
+      "authenticationType": "none",
+      "csrfProtection": false
     },
     {
-      "source": "^/dms_api/(.*)$",
-      "service":  "com.sap.ecm.reuse",
-      "destination": "SAP_DMS",
-      "authenticationType": "xsuaa",
-      "csrfProtection": true
+      "source": "^/SAP_DMS/(.*)$",
+      "target": "$1",
+      "destination": "SAP_DMS"
     },
     {
       "source": "^/user_api/(.*)$",

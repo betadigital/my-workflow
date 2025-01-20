@@ -12,17 +12,12 @@ server:
         ignoreCertError: true # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
         debug: true
         backend:
-          - path: /workflow_api
+          - path: /SAP_Build_Workflow
             pathPrefix: /public/workflow/rest
-            url: https://spa-api-gateway-bpi-ap-prod.cfapps.ap10.hana.ondemand.com
             destination: SAP_Build_Workflow
-          - path: /dms_api
+          - path: /SAP_DMS
             pathPrefix: /
-            url: https://api-sdm-di.cfapps.ap10.hana.ondemand.com
             destination: SAP_DMS
-          - path: /user_api
-            pathPrefix: /
-            url: https://beta-digital-dev.authentication.ap10.hana.ondemand.com
         ui5:
           path:
             - /resources
