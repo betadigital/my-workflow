@@ -13,7 +13,7 @@
       "source": "^/SAP_Build_Workflow/(.*)$",
       "target": "/public/workflow/rest/$1",
       "destination": "SAP_Build_Workflow",
-      "authenticationType": "none",
+      "authenticationType": "xsuaa",
       "csrfProtection": false
     },
     {
