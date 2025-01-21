@@ -90,11 +90,6 @@ resources:
     service: html5-apps-repo
     service-name: sapuiworkflowtrial-html5-service
     service-plan: app-host
-- name: workflow-service
-  type: org.cloudfoundry.managed-service
-  parameters:
-    service: process-automation-service
-    service-plan: standard
 parameters:
   deploy_mode: html5-repo
   enable-parallel-deployments: true
