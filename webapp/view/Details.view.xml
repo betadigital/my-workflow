@@ -19,40 +19,15 @@
                         <Label text="Project Number"/>
                         <Input value="{workflowModel>/context/startEvent/projectNumber}" editable="false"/>
                         <Label text="Project Manager"/>
-                        <Input 
-                        value="{
-                                parts: [
-                                    'workflowModel>/context/startEvent/projectManager/FirstName',
-                                    'workflowModel>/context/startEvent/projectManager/LastName'
-                                ],
-                                formatter: '.concatSponsorName'
-                            }"
-                        editable="false"/>
+                        <Input value="{workflowModel>/context/startEvent/projectManager}" editable="false"/>
                         <Label text="Project Owner" required="true"/>
-                        <Input 
-                        value="{
-                                parts: [
-                                    'workflowModel>/context/startEvent/projectOwner_1/FirstName',
-                                    'workflowModel>/context/startEvent/projectOwner_1/LastName'
-                                ],
-                                formatter: '.concatSponsorName'
-                            }"
-                        editable="false"/>
+                        <Input value="{workflowModel>/context/startEvent/projectOwner_1}" editable="false"/>
                         <Label text="Project Owner Rep"/>
-                        <Input 
-                        value="{
-                                parts: [
-                                    'workflowModel>/context/startEvent/projectOwnerRep/FirstName',
-                                    'workflowModel>/context/startEvent/projectOwnerRep/LastName'
-                                ],
-                                formatter: '.concatSponsorName'
-                            }"
-                        editable="false"/>
-
+                        <Input value="{workflowModel>/context/startEvent/projectOwnerRep}" editable="false"/>
                         <Label text="Division"/>
                         <Input value="{workflowModel>/context/startEvent/division}" editable="false"/>
                         <Label text="Business Unit"/>
-                        <Input value="{workflowModel>/context/startEvent/businessUnit}" editable="false"/>
+                        <Input value="{workflowModel>/context/startEvent/businessUnit_1}" editable="false"/>
                         <Label text="Department"/>
                         <Input value="{workflowModel>/context/startEvent/department}" editable="false"/>
                         <Label text="Cost Center"/>
