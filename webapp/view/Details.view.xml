@@ -12,32 +12,53 @@
                     layout="ColumnLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12" labelSpanS="12"
                     adjustLabelSpan="false" columnsXL="2" columnsL="1" columnsM="1">
                         <f:content>
-                        <Label text="Date"/>
-                        <Input value="{workflowModel>/context/startEvent/date}" editable="false"/>
-                        <Label text="Project No/ID"/>
-                        <Input value="{workflowModel>/context/startEvent/projectNoID}" editable="false"/>
+                        <Label text="Asset Name"/>
+                        <TextArea value="{workflowModel>/context/startEvent/assetName}" editable="false"/>
                         <Label text="Project Name"/>
                         <Input value="{workflowModel>/context/startEvent/projectName}" editable="false"/>
+                        <Label text="Project Number"/>
+                        <Input value="{workflowModel>/context/startEvent/projectNumber}" editable="false"/>
+                        <Label text="Project Manager"/>
+                        <Input 
+                        value="{
+                                parts: [
+                                    'workflowModel>/context/startEvent/projectManager/FirstName',
+                                    'workflowModel>/context/startEvent/projectManager/LastName'
+                                ],
+                                formatter: '.concatSponsorName'
+                            }"
+                        editable="false"/>
+                        <Label text="Project Owner" required="true"/>
+                        <Input 
+                        value="{
+                                parts: [
+                                    'workflowModel>/context/startEvent/projectOwner_1/FirstName',
+                                    'workflowModel>/context/startEvent/projectOwner_1/LastName'
+                                ],
+                                formatter: '.concatSponsorName'
+                            }"
+                        editable="false"/>
+                        <Label text="Project Owner Rep"/>
+                        <Input 
+                        value="{
+                                parts: [
+                                    'workflowModel>/context/startEvent/projectOwnerRep/FirstName',
+                                    'workflowModel>/context/startEvent/projectOwnerRep/LastName'
+                                ],
+                                formatter: '.concatSponsorName'
+                            }"
+                        editable="false"/>
+
                         <Label text="Division"/>
                         <Input value="{workflowModel>/context/startEvent/division}" editable="false"/>
                         <Label text="Business Unit"/>
                         <Input value="{workflowModel>/context/startEvent/businessUnit}" editable="false"/>
                         <Label text="Department"/>
                         <Input value="{workflowModel>/context/startEvent/department}" editable="false"/>
-                        <Label text="Project Sponsor"/>
-                        <Input 
-                        value="{
-                                parts: [
-                                    'workflowModel>/context/startEvent/projectSponsor/FirstName',
-                                    'workflowModel>/context/startEvent/projectSponsor/LastName'
-                                ],
-                                formatter: '.concatSponsorName'
-                            }"
-                        editable="false"/>
                         <Label text="Cost Center"/>
                         <Input value="{workflowModel>/context/startEvent/costCenter}" editable="false"/>
                         <Label text="CAPEX Total Amount"/>
-                        <Input value="{workflowModel>/context/startEvent/cAPEXTotalAmount}" editable="false"/>
+                        <Input value="{workflowModel>/context/startEvent/capitalTotal}" editable="false"/>
                         <Label text="Budget Type"/>
                         <RadioButtonGroup id="budgetType" selectedIndex="{workflowModel>/context/startEvent/budgetTypeIndex}" editable="false">
                             <buttons>
@@ -94,7 +115,7 @@
                     </f:SimpleForm>
                     <Panel width="auto">
                         <Label text="Files"/>
-                        <UploadCollection items="{workflowModel>/filesCollection}" uploadEnabled="false"
+                        <UploadCollection items="{workflowModel>/uploadedFiles}" uploadEnabled="false"
                         uploadButtonInvisible="true" noDataText="No uploaded files" busy="{busyModel>/isBusy}">
                             <items>
                                 <UploadCollectionItem enableEdit="false" visibleEdit="false"
