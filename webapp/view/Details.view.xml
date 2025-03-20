@@ -20,7 +20,7 @@
                         <Input value="{workflowModel>/context/startEvent/projectNumber}" editable="false"/>
                         <Label text="Project Manager"/>
                         <Input value="{workflowModel>/context/startEvent/projectManager}" editable="false"/>
-                        <Label text="Project Owner" required="true"/>
+                        <Label text="Project Owner"/>
                         <Input value="{workflowModel>/context/startEvent/projectOwner_1}" editable="false"/>
                         <Label text="Project Owner Rep"/>
                         <Input value="{workflowModel>/context/startEvent/projectOwnerRep}" editable="false"/>
