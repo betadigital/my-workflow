@@ -34,8 +34,62 @@
                                 formatter: '.concatSponsorName'
                             }"
                         editable="false"/>
+                        <Label text="Cost Center"/>
+                        <Input value="{workflowModel>/context/startEvent/costCenter}" editable="false"/>
                         <Label text="CAPEX Total Amount"/>
                         <Input value="{workflowModel>/context/startEvent/cAPEXTotalAmount}" editable="false"/>
+                        <Label text="Budget Type"/>
+                        <RadioButtonGroup id="budgetType" selectedIndex="{workflowModel>/context/startEvent/budgetTypeIndex}" editable="false">
+                            <buttons>
+                                <RadioButton text="Budgeted"/>
+                                <RadioButton text="Unbudgeted" />
+                            </buttons>
+                        </RadioButtonGroup>
+                        <Label text="Budget Allocation"/>
+                        <RadioButtonGroup id="budgetAllocation" selectedIndex="{workflowModel>/context/startEvent/budgetAllocationIndex}" editable="false">
+                            <buttons>
+                                <RadioButton text="Chief Executive Reserve"/>
+                                <RadioButton text="General PGC" />
+                                <RadioButton text="Growth Pool" />
+                                <RadioButton text="Safety PGC" />
+                                <RadioButton text="Sustaining(LTCP)" />
+                            </buttons>
+                        </RadioButtonGroup>
+                        <Label text="Portfolio Category"/>
+                        <RadioButtonGroup id="portfolioCategory" selectedIndex="{workflowModel>/context/startEvent/portfolioCategoryIndex}" editable="false">
+                            <buttons>
+                                <RadioButton text="Growth – Cost Reduction" />
+                                <RadioButton text="Growth – Increase Sales" />
+                                <RadioButton text="PGC" />
+                                <RadioButton text="Sustaining – Customer" />
+                                <RadioButton text="Sustaining – Environmental" />
+                                <RadioButton text="Sustaining – Increase Sales" />
+                                <RadioButton text="Sustaining – Operational Security" />
+                                <RadioButton text="Sustaining – Safety" />
+                                <RadioButton text="Sustaining – Statutory" />
+                                <RadioButton text="Sustaining – Cost Reduction" />
+                            </buttons>
+                        </RadioButtonGroup>
+                        <Label text="Estimated Months from Capital Approval to Handover"/>
+                        <Input id="estimatedMonths" value="{workflowModel>/context/startEvent/estimatedMonths}" editable="false"/>
+                        <Label visible="false"/>
+                        <CheckBox text="Is this a Lease?" selected="{workflowModel>/context/startEvent/lease}" useEntireWidth="true" editable="false"/>
+                        <Label visible="false"/>
+                        <CheckBox text="Is this a Supplementary CAPEX request?" selected="{workflowModel>/context/startEvent/supplementary}" editable="false"/>
+                        <Label visible="false"/>
+                        <CheckBox text="Are Budgets set at a PMO 4WON level?" selected="{workflowModel>/context/startEvent/pmo4Won}" editable="false"/>
+                        <Label visible="false"/>
+                        <CheckBox text="Is this a Technical CAPEX?" selected="{workflowModel>/context/startEvent/technicalCapex}" editable="false"/>
+                        <Label visible="false"/>
+                        <CheckBox text="May the proposal have potential impact on Safety?" selected="{workflowModel>/context/startEvent/safetyImpact}" editable="false"/>
+                        <Label visible="false"/>
+                        <CheckBox text="May the proposal have potential impact on environmental conditions?" selected="{workflowModel>/context/startEvent/environmentImpact}" editable="false"/>
+                        <Label visible="false"/>
+                        <CheckBox text="Does this proposal require any information technology devices?" selected="{workflowModel>/context/startEvent/ITImpact}" editable="false"/>
+                        <Label text="PID" />
+                        <Input value="{workflowModel>/context/startEvent/pID}" editable="false"/>
+                        <Label text="Capital Order Number"/>
+                        <Input value="{workflowModel>/context/startEvent/capitalOrderNumber}" editable="false"/>
                         </f:content>
                     </f:SimpleForm>
                     <Panel width="auto">
