@@ -7,7 +7,7 @@
     <App>
         <Page title="Capex Request for Approval" showNavButton="true" navButtonPress=".onNavBack">
             <content>
-                <layout:VerticalLayout>
+                <layout:VerticalLayout class="sapUiLargeMarginBeginEnd sapUiSmallMarginTopBottom">
                     <f:SimpleForm editable="false" 
                     layout="ColumnLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12" labelSpanS="12"
                     adjustLabelSpan="false" columnsXL="2" columnsL="1" columnsM="1">
