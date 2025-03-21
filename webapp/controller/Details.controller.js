@@ -22,7 +22,7 @@ sap.ui.define([
             const prefixUrl = this._getExternalServiceRuntimeBaseURL();
             let workflowData = await this._fetchWorkflowData(prefixUrl, instanceId);
             oWorkflowModel.setProperty("/context", workflowData)
-            let uploadedFolder = workflowData ? workflowData.startEvent.uploadFiles : null;
+            let uploadedFolder = workflowData ? workflowData.startEvent.uploadfiles : null;
             if (uploadedFolder) {
                 var oBusyModel = this.getView().getModel("busyModel");
                 oBusyModel.setProperty("/isBusy", true);
