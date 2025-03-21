@@ -90,7 +90,7 @@
                     </f:SimpleForm>
                     <Panel width="auto">
                         <Label text="Files"/>
-                        <UploadCollection items="{/filesCollection}" uploadEnabled="false"
+                        <UploadCollection items="{workflowModel>/filesCollection}" uploadEnabled="false"
                         uploadButtonInvisible="true" noDataText="No uploaded files" busy="{busyModel>/isBusy}">
                             <items>
                                 <UploadCollectionItem enableEdit="false" visibleEdit="false"
@@ -99,7 +99,7 @@
                                     url="{fileObjectId}"
                                     press="onAttachmentPress"/>
                             </items>
-                        </UploadCollection>                       
+                        </UploadCollection>
                     </Panel>    
                 
                 </layout:VerticalLayout> 
