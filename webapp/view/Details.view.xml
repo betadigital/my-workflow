@@ -90,13 +90,13 @@
                     </f:SimpleForm>
                     <Panel width="auto">
                         <Label text="Files"/>
-                        <UploadCollection items="{workflowModel>/filesCollection}" uploadEnabled="false"
+                        <UploadCollection items="{/filesCollection}" uploadEnabled="false"
                         uploadButtonInvisible="true" noDataText="No uploaded files" busy="{busyModel>/isBusy}">
                             <items>
                                 <UploadCollectionItem enableEdit="false" visibleEdit="false"
                                     enableDelete="false" visibleDelete="false"
-                                    fileName="{fileName}"
-                                    url="{fileObjectId}"
+                                    fileName="{workflowModel>fileName}" 
+                                    url="{workflowModel>fileObjectId}"
                                     press="onAttachmentPress"/>
                             </items>
                         </UploadCollection>
