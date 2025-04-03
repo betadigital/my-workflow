@@ -7,12 +7,12 @@
           id="workflowTable"
           items="{workflowModel>/workflowData/rows}" mode="SingleSelectMaster" selectionChange="onRowSelect">
           <columns>
-            <Column>
+            <!-- <Column>
               <Text text="Asset Name" />
             </Column>
             <Column>
               <Text text="Project Name" />
-            </Column>
+            </Column> -->
             <Column>
               <Text text="Name" />
             </Column>
@@ -32,8 +32,8 @@
           <items>
             <ColumnListItem>
               <cells>
-                <Text text="{workflowModel>assetName}" />
-                <Text text="{workflowModel>projectName}" />
+                <!-- <Text text="{workflowModel>assetName}" />
+                <Text text="{workflowModel>projectName}" /> -->
                 <Text text="{workflowModel>subject}" />
                 <Text text="{workflowModel>status}" />
                 <Text text="{workflowModel>environmentId}" />
