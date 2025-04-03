@@ -8,6 +8,12 @@
           items="{workflowModel>/workflowData/rows}" mode="SingleSelectMaster" selectionChange="onRowSelect">
           <columns>
             <Column>
+              <Text text="Asset Name" />
+            </Column>
+            <Column>
+              <Text text="Project Name" />
+            </Column>
+            <Column>
               <Text text="Name" />
             </Column>
             <Column>
@@ -26,6 +32,8 @@
           <items>
             <ColumnListItem>
               <cells>
+                <Text text="{workflowModel>assetName}" />
+                <Text text="{workflowModel>projectName}" />
                 <Text text="{workflowModel>subject}" />
                 <Text text="{workflowModel>status}" />
                 <Text text="{workflowModel>environmentId}" />
