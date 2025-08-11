@@ -43,7 +43,7 @@ sap.ui.define([
             };
 
             try {
-                const response = await fetch(`${prefixUrl}/SAP_Build_Workflow/v1/workflow-instances/${instanceId}/context`, requestOptions)
+                const response = await fetch(`${prefixUrl}/sap_process_automation_service_user_access/v1/workflow-instances/${instanceId}/context`, requestOptions)
                 if (!response.ok) {
                     throw new Error(`Error in fetching workflow instance with status: ${response.status}`)
                 }

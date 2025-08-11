@@ -52,8 +52,8 @@ sap.ui.define([
         method: "GET",
         redirect: "follow"
       };
-      const url = user ? `${prefixUrl}/SAP_Build_Workflow/v1/workflow-instances?startedBy=${user.email}`
-        : `${prefixUrl}/SAP_Build_Workflow/v1/workflow-instances`;
+      const url = user ? `${prefixUrl}/sap_process_automation_service_user_access/v1/workflow-instances?startedBy=${user.email}`
+        : `${prefixUrl}/sap_process_automation_service_user_access/v1/workflow-instances`;
       try {
         const response = await fetch(url, requestOptions)
         if (!response.ok) {
